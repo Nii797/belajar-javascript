@@ -134,3 +134,5 @@ const application = "Belajar Javascript";
 application = "Gak mau belajar";
 
 document.writeln(application);
+
+alert("hello world");

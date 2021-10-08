@@ -92,7 +92,7 @@
 // document.writeln(fullName);
 // document.writeln("<br>");
 
-document.writeln("==================== varaibel let ==========================")
+document.writeln("==================== varibel let ==========================")
 let fullName = "Soni Hidayatulloh Ganteng";
 let firstName = "Soni";
 let middleName = "Hidayatulloh";
@@ -128,9 +128,10 @@ document.writeln(fullName);
 document.writeln("<br>");
 
 document.writeln("<br>")
-document.writeln("========= varaibel const ============");
+document.writeln("========= variabel const ============");
 
-const application = "Belajar Javascript";
+var bilangan = 1;
+var application = "Belajar Javascript";
 application = "Gak mau belajar";
 
 document.writeln(application);

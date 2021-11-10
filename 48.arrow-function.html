@@ -31,6 +31,23 @@
         }
         console.log(sum(20,5));
 
+
+
+
+        // arrow function sebagai paramater
+        function giveMeName(callback) {
+            callback("Soni");
+        }
+
+        // versi anonymous function 
+        // giveMeName(function (namess) {
+        //     console.info(`Hello ${namess}`);
+        // });
+
+        // versi arrow function
+        giveMeName((namess) => console.info(`Hello ${namess}`));
+        giveMeName(namess => console.info(`Hello ${namess}`));
+
     </script>
 
 </body>

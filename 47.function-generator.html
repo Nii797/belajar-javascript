@@ -1,0 +1,82 @@
+<!-- PR -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Generator</title>
+</head>
+<body>
+    
+    <script>
+
+        // function generator sederahana 
+        function* createName() {
+            yield "Soni";
+            yield "Hidayatulloh"
+        }
+
+        const name = createName();
+        for (const names of name) {
+            console.log(names);
+        }
+
+        // contoh lebih kompleks function generator 
+        // lazy
+        function* buatGanjil(value) {
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    // lazzy
+                    console.info(`Yield ${i}`);
+                    yield i;
+                }
+            }
+        }
+
+        const numbers = buatGanjil(100);
+        // for (const number of numbers) {
+        //     console.info(number);
+        // }
+        // memakai lazy
+        console.info(numbers.next().value);
+
+        // eager
+        function* buatGanjilArray(value) {
+            const result = [];
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    // lazzy
+                    console.info(`Yield ${i}`);
+                    result.push(i);
+                }
+            }
+            return result;
+        }
+
+        // const numberr = buatGanjilArray(100);
+        // for (const numberrs of numberr) {
+        //     console.info(numberrs);
+        // }
+
+
+
+        // lazy generator
+        function* buatGanjils(valuee) {
+            for (let iterasi = 1; iterasi <= valuee; valuee++) {
+                if (iterasi % 2 === 0) {
+                    console.info(`Perulangan ke ${iterasi}`)
+                    yield iterasi;
+                }
+            }
+        }
+
+        const angkaGanjills = buatGanjils(100);
+        // next fitur yang dimiliki generator 
+        console.info(angkaGanjills.next().valuee);
+
+    </script>
+
+</body>
+</html>

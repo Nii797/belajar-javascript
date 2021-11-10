@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    
+    <script>
+
+        
+        // arrow function 
+        const sayHello = (name) => {
+            const say = `Hello ${name}`;
+            console.info(say);
+        }        
+
+        // arrow function tanpa block jikalau satu baris 
+        // const sayHello = (name) => console.info(`Hello ${name}`);
+
+        sayHello("Soni");
+
+
+        // arrow function return value
+        // const sum = (first, second) => first + second;
+        // atau yang ada return nya
+        const sum = (first, second) => {
+            return first + second;
+        }
+        console.log(sum(20,5));
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masalah Variabel Var</title>
+</head>
+<body>
+    
+    <script>
+
+        // menggunakan let global scope
+        let i = 20;
+        for (let i = 0; i < 10; i++) {
+            // local scope
+            console.info(`Local :  ${i}`);
+        }
+        console.info(`Global : ${i}`);
+
+
+        // menggunakan var
+        // var i = 20;
+        // for (var i = 0; i < 10; i++) {
+        //     // local scope
+        //     console.info(`Local :  ${i}`);
+        // }
+        // console.info(`Global : ${i}`);
+
+    </script>
+
+</body>
+</html>

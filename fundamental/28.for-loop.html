@@ -21,11 +21,23 @@
         //     document.writeln(`<p>Perulangan ke ${counter}</p>`);
         //     counter++;
         // }
-        // atau 
-        for (counter = 1; counter <= 10; counter++) {
-            document.writeln(`<p>Perulangan ke ${counter}</p>`);
-        }
 
+        // atau 
+
+        // for (counter = 1; counter <= 10; counter++) {
+        //     document.writeln(`<p>Perulangan ke ${counter}</p>`);
+        // }
+
+        // membuat segittiga
+        let s = '';
+        for (i = 0; i < 10; i++ ) {
+            // s += '*';
+            for (let j = 0; j < 5; j++) {
+                s += "*";
+            }
+            s += '\n';
+        }
+        console.info(s);
 
     </script>
 

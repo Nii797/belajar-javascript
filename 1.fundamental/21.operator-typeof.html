@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Typeof</title>
+</head>
+<body>
+    
+    <script>
+
+        {
+            const iniTypeOf = (data) => {
+                if (typeof data === "number") {
+                    console.info("Number");
+                } else if (typeof data === "string") {
+                    console.info("String");
+                } else if (typeof data === "boolean") {
+                    console.info("Boolean");
+                } else if (typeof data === "object") {
+                    console.info("Object");
+                }
+                return data
+            }
+
+            iniTypeOf("number");
+        }
+
+        {
+            let data1 = "Soni";
+
+            const typeData = typeof data1;
+            document.writeln(`<p>${typeData}</p>`);
+        }
+        
+    </script>
+
+</body>
+</html>

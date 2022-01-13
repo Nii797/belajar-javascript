@@ -10,24 +10,45 @@
     
     <script>
 
-        function Mobil() {
-            this.namaMobil = "",
-            this.brandMobil = "",
-            this.warna = ""
+        // construction function
+        {
+            function Person() {
+                this.firstName = "";
+                this.lastName = "";
+                // constructor function
+                this.sayHello = function (name) {
+                    console.info(`Hello ${name}, my name is ${this.firstName}`);
+                }
+            }
+
+            const soni = new Person();
+            soni.firstName = "Soni";
+            soni.lastName = "Hidayatulloh";
+            soni.sayHello("Ririn");
+
+            console.log(soni);
         }
 
-        const mobilSoni = new Mobil();
-        mobilSoni.namaMobil = "Golf GTX";
-        mobilSoni.brandMobil = "Ferrari";
-        mobilSoni.warna = "Hitam"
+        {
+            function Mobil() {
+                this.namaMobil = "",
+                this.brandMobil = "",
+                this.warna = ""
+            }
 
-        const mobilRirin = new Mobil();
-        mobilRirin.namaMobil = "Golf GTX";
-        mobilRirin.brandMobil = "Ferrari";
-        mobilRirin.warna = "Hitam"
+            const mobilSoni = new Mobil();
+            mobilSoni.namaMobil = "Golf GTX";
+            mobilSoni.brandMobil = "Ferrari";
+            mobilSoni.warna = "Hitam"
 
-        console.log(mobilSoni);
-        console.log(mobilRirin);
+            const mobilRirin = new Mobil();
+            mobilRirin.namaMobil = "Golf GTX";
+            mobilRirin.brandMobil = "Ferrari";
+            mobilRirin.warna = "Hitam"
+
+            console.log(mobilSoni);
+            console.log(mobilRirin);
+        }
 
     </script>
 

@@ -10,6 +10,14 @@
     
     <script>
 
+        function Person(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.sayHello = function (name) {
+                console.info(`Hello ${name}, my name is ${this.firstName}`);
+            }
+        }
+
         const soni = new Person("Soni", "Hidayatulloh");
         const ririn = new Person("Ririn", "Novita");
 

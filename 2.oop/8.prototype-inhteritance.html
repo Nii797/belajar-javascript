@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Inheritance</title>
+</head>
+<body>
+    
+    <script>
+
+        // pewarisan di prototype 
+
+        // pewarisan prototype cara yang benar
+        function Employee(name) {
+            this.name = name;
+        }
+
+        function Manager(name) {
+            this.name = name;
+        }
+
+        Manager.prototype = Object.create(Employee.prototype);
+
+        Manager.prototype.sayHello = function (name) {
+            console.info(`Hello ${name}, my name is Manager ${this.name}`);
+        }
+
+        Employee.prototype.sayHello = function (name) {
+            console.info(`Hello ${name}, my name is Employee ${this.name}`);
+        }
+
+        const manager = new Manager("Soni");
+        manager.sayHello("Boss");
+
+        const employee = new Employee("Ririn");
+        employee.sayHello("Boss");
+
+        console.log(employee);
+        console.log(manager);
+
+        // pewarisan prototype cara yang salah
+        {
+            // function Employee(name) {
+            //     this.name = name;
+            // }
+
+            // function Manager(name) {
+            //     this.name = name;
+            // }
+
+            // // salah
+            // Manager.prototype = Employee.prototype;
+            
+            // Manager.prototype.sayHello = function (name) {
+            //     console.info(`Hello ${name}, my name is Manager ${this.name}`);
+            // }
+
+            // Employee.prototype.sayHello = function (name) {
+            // console.info(`Hello ${name}, my name is Employee ${this.name}`);
+            // }
+
+            // const employee = new Employee("Soni");
+            // employee.sayHello("Boss");
+
+            // const manager = new Manager("Ririn");
+            // manager.sayHello("Boss") ;
+        }
+        // hasilnya akan salah
+
+
+    </script>
+
+</body>
+</html>

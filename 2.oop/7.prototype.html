@@ -18,11 +18,27 @@
             }
         }
 
+        Person.prototype.sayBye = function () {
+            console.info("Good Bye");
+        }
+
+        Person.prototype.run = function () {
+            console.log(`${this.firstName} is running`);
+        } 
+
         const soni = new Person("Soni", "Hidayatulloh");
+        soni.sayBye = function () {
+            console.info("Sampai Jumpa");
+        }
+        soni.run();
+
         const ririn = new Person("Ririn", "Novita");
 
         console.info(soni);
         console.info(ririn);
+
+        soni.sayBye();
+        soni.run(); 
 
     </script>
 

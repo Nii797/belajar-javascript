@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percobaan</title>
+</head>
+<body>
+    
+    <script>
+
+        function OperasiMatematika(bilangan1, bilangan2) {
+            this.bilangan1 = bilangan1;
+            this.bilangan2 = bilangan2;
+            this.tambah = function (bilangan1, bilangan2) {
+                const exc = bilangan1 + bilangan2;
+                console.info(`Hasilnya ${exc}`);
+            }
+        }    
+
+        const jumlah = new OperasiMatematika();
+        jumlah.bilangan1 = 4;
+        jumlah.bilangan2 = 4; 
+        jumlah.tambah(4,4);
+        console.log(jumlah);
+
+    </script>
+
+</body>
+</html>

@@ -4,15 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Private Class Field</title>
+    <title>Class Private Field</title>
 </head>
 <body>
     
     <script>
 
-        class Customer {
-            
+        class Counter {
+
+            // private
+            #counter = 0;
+
+            increment(){
+                this.#counter++;
+            }
+
+            decrement(){
+                this.#counter--;
+            }
+
+            get(){
+                return this.#counter;
+            }
+
         }
+
+        const counter = new Counter();
+
+        counter.increment();
+        counter.increment();
+        counter.increment();
+        counter.increment();
+        counter.increment();
+
+        console.log(counter.get());
+        console.info(counter);
 
     </script>
 

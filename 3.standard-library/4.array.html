@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    
+    <script>
+
+        // Array Loop
+        {
+            const array = ["Soni", "Hidayataulloh"];
+
+            array.forEach(function (value, index) {
+                console.info(`${index} : ${value}`);
+            });
+
+            array.forEach((value, index) => console.info(`${index} : ${value}`));
+        
+            array.forEach(value => console.info(value));
+        }
+
+        console.info("");
+
+        // Array Queue (Antrian) 
+        {
+            const queue = [];
+
+            queue.push("Soni");
+            queue.push("Hidayatulloh");
+
+            console.info(queue.shift());
+            console.info(queue.shift());
+            console.info(queue.shift());
+        }
+
+        console.info("");
+
+        // Array Stack (Tumpukan)
+        {
+            const stack = [];
+
+            stack.push("kartu1");
+            stack.push("kartu2");
+            stack.push("kartu3");
+
+            console.info(stack.pop());
+            console.info(stack.pop());
+            console.info(stack.pop());
+            console.info(stack.pop());
+        }
+
+        console.info("");
+
+        // Array Search
+        {
+            const source = [1,2,3,4,5,1,2,3,4,5]
+
+            console.info(source.find(value => value > 3)); // 4
+            console.info(source.findIndex(value => value > 3)); // 3
+            console.info(source.includes(7)); // false
+            console.info(source.indexOf(5)); // 4
+            console.info(source.lastIndexOf(5)) // 9
+        }
+
+        console.info("");
+
+        // Array Filter
+        {
+            const numbers = [1,2,3,4,5,6,7,8,9,10];
+            const ganjil = numbers.filter(value => value % 2 === 1);
+            const genap = numbers.filter(value => value % 2 === 0);
+
+            console.info(numbers);
+            console.info(ganjil);
+            console.info(genap);
+        }
+
+        console.info("");
+
+        // Array Transform
+        {
+            const names = ["Leon Scott Kennedy"];
+            const nameUpperCase = names.map(value => value.toLocaleUpperCase());
+            console.info(nameUpperCase);
+
+            const nameReduce = names.reduce((before, value) => before + " " + value);
+            console.info(nameReduce);
+
+            const namesRight = names.reduceRight((before, value) => before + " " + value);
+            console.info(namesRight);
+
+            const numbers = [1,2,3,4,5,6,7,8,9,10];
+            const total = numbers.reduce((before, value) => before + value);
+            console.info(total);
+        }
+
+
+    </script>
+
+</body>
+</html>

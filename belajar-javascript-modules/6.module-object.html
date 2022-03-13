@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module Object</title>
+    <script type="module" src="scripts/6.module-object.js"></script>
+</head>
+<body>
+    
+    <script type="module">
+
+        // import {firstName, lastName, aliasName, hello, Person} from "./scripts/6.module-object.js";
+        import * as Soni from "./scripts/6.module-object.js";
+        
+        console.info(Soni.firstName);
+        console.info(Soni.lastName);
+        console.info(Soni.aliasName);
+
+        console.info('');
+
+        Soni.hello();
+
+        console.info('');
+
+        const person = new Soni.Person();
+        console.info(person.name);        
+
+    </script>
+
+</body>
+</html>

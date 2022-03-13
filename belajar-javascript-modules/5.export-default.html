@@ -5,10 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Export Default</title>
+    
+    <!-- Javascript -->
+    <script type="module" src="scripts/5.export-default.js"></script>
+    <script type="module" src="scripts/5.export-default-class.js"></script>
+    <script type="module" src="scripts/5.export-default-variable.js"></script>
 </head>
 <body>
     
-    
+    <script type="module">
+        
+        import panggilExportDefault from "./scripts/5.export-default.js";
+        import {default as Person} from "./scripts/5.export-default-class.js";
+        import panggilExportDefaultVariable from "./scripts/5.export-default-variable.js"; 
+
+        // panggil export default
+        panggilExportDefault("Soni");
+
+        // panggil export default variable 
+        console.info(panggilExportDefaultVariable);
+
+        // // panggil export default class
+        const person = new Person("Soni");
+        person.sayHi();
+
+    </script>
 
 </body>
 </html>

@@ -1,4 +1,4 @@
-export const firstName = "Soni";
+export const firstName = "aSoni";
 export const lastName = "Hidayatulloh";
 export const aliasName = "Nii";
 

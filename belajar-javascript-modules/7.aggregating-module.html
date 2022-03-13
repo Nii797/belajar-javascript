@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module Aggregate</title>
+    <script type="module" src="scripts/7.aggregating-module.js"></script>
+</head>
+<body>
+    
+    <script type="module">
+
+        import {Person, firstName, lastName, aliasName} from "./scripts/7.aggregating-module.js";
+        import {sum} from "./scripts/7.aggregating-module.js";
+
+        const person = new Person();
+        console.info(person.name)
+        
+        console.info(`Hello my name is ${firstName} ${lastName}, call my ${aliasName}`);
+
+        console.info(sum(5,5));
+
+    </script>
+
+</body>
+</html>

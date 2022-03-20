@@ -1,0 +1,97 @@
+<!-- turunan node -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element</title>
+</head>
+<body>
+    
+    <!-- Element -->
+    <!-- <h1 id="title">Judul</h1>
+    <p id="description">Description</p>
+
+    <script>
+
+        const title = document.getElementById("title");
+        title.textContent = "Selamat datang di js soni";
+
+        const description = document.getElementById("description");
+        description.textContent = "Selamat belajar bahasa pemograman javascript DOM soni";
+
+    </script> -->
+
+
+
+    <!-- Element Property -->
+    <!-- <div id="content" class="content">
+        <h1 id="title">Judul</h1>
+        <p id="description">Description</p>
+    </div>
+
+    <script>
+
+        const content = document.getElementById("content");
+        console.info(content.id);
+        console.info(content.className);
+        console.info(content.tagName);
+
+    </script> -->
+
+
+
+    <!-- Element Property -->
+    <!-- <div id="content" class="content">
+            <h1 id="title">Judul</h1>
+            <p id="description">Description</p>
+    </div>
+    
+    <script>
+        const content = document.getElementById("content");
+        console.info(content.id);
+        console.info(content.className);
+        console.info(content.tagName);
+    </script> -->
+
+
+
+    <!-- Element Method -->
+    <!-- <div class="content" id="content">
+        <h1 class="title" id="title">This is title</h1>
+        <p class="description" id="description">This is description</p>
+    </div>
+
+    <script>
+
+        const title = document.getElementById("title");
+        const description = document.getElementById("description");
+
+        title.remove();
+        description.remove();
+
+    </script> -->
+
+
+
+    <!-- Membuat Element (Element Create) -->
+    <div class="content" id="content"></div>
+
+    <script>
+
+        const content = document.getElementById("content");
+
+        const title = document.createElement("h1");       
+        title.textContent = "Belajar Javascript DOM";
+        content.appendChild(title);
+
+        const description = document.createElement("p");
+        description.textContent = "Mari belajar javascript content";
+        content.appendChild(description);
+
+    </script>
+
+</body>
+</html>

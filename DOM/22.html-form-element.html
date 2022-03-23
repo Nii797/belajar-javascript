@@ -7,9 +7,29 @@
     <title>Document</title>
 </head>
 <body>
-    
+
+    <form name="commentForm">
+        <label for="comment">
+            Comment : <input type="text" id="comment" name="comment">
+        </label>
+        <br>
+        <label for="from">
+            From : <input type="text" id="from" name="from">
+        </label>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <div id="commentList"></div>
+
     <script>
 
+        document.querySelector("form[name=commentForm]").onsubmit = function (event) {
+            const commentForm = document.getElementById("commentForm");
+            const comment = document.getElementById("comment");
+            const from = document.getElementById("from");
+
+            event.preventDefault();
+        }
 
     </script>
 

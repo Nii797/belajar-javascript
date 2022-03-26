@@ -1,0 +1,60 @@
+<!-- PR -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengirim data dengan AJAX</title>
+</head>
+<body>
+    
+    <!-- Web Form Login -->
+    <form>
+        <label for="username">
+            Username :
+            <input type="text" id="username" name="username">
+        </label>
+        <br>
+        <label for="password">
+            Password :
+            <input type="password" id="password" name="password">
+        </label>
+        <br>
+        <input type="button" id="login" value="Login">
+    </form>
+
+    <h1 id="response"></h1>
+
+    <script>
+
+        function dbLogin() {
+            const ajax = new XMLHttpRequest();
+            ajax.open("POST", "https://hookb.in/pz0olGl8KqiRPnrrW968");
+            ajax.onload = function () {
+                const response = document.getElementById("response");
+                response.innerText = ajax.responseText;
+                // console.info(ajax.responseText);
+            }
+            ajax.setRequestHeader('Content-Type', 'application/json');
+
+            // ajax.send(JSON.stringify({
+            //     username: document.getElementById("username").value,
+            //     password: document.getElementById("password").value
+            // }));
+
+            const json = {
+                username: document.getElementById("username").value,
+                password: document.getElementById("password").value
+            };
+
+            ajax.send(JSON.stringify(json));
+        }
+
+        document.getElementById("login").onclick = dbLogin;
+
+    </script>
+
+</body>
+</html>

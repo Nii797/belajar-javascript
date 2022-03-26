@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menerima Data Dari Ajax</title>
+</head>
+<body>
+    
+    <h1 id="response"></h1>
+    <h2 id="sayHai"></h2>
+
+    <script>
+
+        const ajax = new XMLHttpRequest();
+        ajax.open("GET", "api/hello.json");
+        ajax.addEventListener("load", function (){
+            const json = JSON.parse(ajax.responseText);
+
+            const header = document.getElementById("response");
+            header.textContent = json.response;
+        });
+        ajax.addEventListener("load", function () {
+            const panggil = JSON.parse(ajax.responseText);
+
+            const headers = document.getElementById("sayHai");
+            headers.textContent = panggil.sayHai;
+        });
+        ajax.send();
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!-- PR -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Upload File</title>
+</head>
+<body>
+    
+    <h1>Register</h1>
+
+    <!-- Web Form Login --> 
+    <form>
+        <label for="username">
+            Username :
+            <input type="text" id="username" name="username">
+        </label>
+        <br>
+        <label for="name">
+            Name :
+            <input type="text" id="name" name="name">
+        </label>
+        <br>
+        <label for="profile">
+            Name :
+            <input type="file" id="profile" name="profile">
+        </label>
+        <br>
+        <input type="button" id="register" value="Register">
+    </form>
+
+    <h1 id="response"></h1>
+
+    <script>
+
+        function doRegister() {
+            const ajax = new XMLHttpRequest();
+            ajax.open("POST", "https://hookb.in/2q9XK7JBZBfdzq88RaV3");
+            ajax.onload = function () {
+                const response = document.getElementById("response");
+                response.innerHTML = ajax.responseText;
+            }
+
+            const form = new FormData();
+            form.append("username", document.getElementById("username").value);
+            form.append("name", document.getElementById("name").value);
+            // form.append("profile", document.getElementById("profile").files.item(0));
+
+            const files = document.getElementById("profile").files;
+            const firstFile = files.item(0);
+
+            form.append("profile", firstFile);
+
+            ajax.send(form);
+        }
+
+        document.getElementById("register").onclick = doRegister;
+
+    </script>
+
+</body>
+</html>

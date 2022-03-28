@@ -1,0 +1,78 @@
+<!-- Promise State -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Static Method</title>
+</head>
+<body>
+    
+    <table>
+        <tr>
+            <td>Id :</td>
+            <td id="id"></td>
+        </tr>
+        <tr>
+            <td>Name :</td>
+            <td id="name"></td>
+        </tr>
+        <tr>
+            <td>Price :</td>
+            <td id="price"></td>
+        </tr>
+    </table>
+
+    <script>
+        // Get Product
+        function getProduct(product){
+            return new Promise(function (resolve, reject) {
+            
+                const ajax = new XMLHttpRequest();
+                ajax.open("GET", `api/${product}.json`);
+                ajax.onload = function () {
+                    if (ajax.status === 200) {
+                        resolve(ajax.responseText);
+                    } else {
+                        reject(`ERROR Get Product With Responsive ${ajax.responseText}`);
+                    }
+                };
+                ajax.send();
+
+            });
+        }
+
+        const promise = Promise.all([
+            getProduct("product1"),
+            getProduct("product2"),
+            getProduct("product3")
+        ]);
+
+        promise.then(function (promise) {
+            console.info(products);
+        });
+
+        // getProduct("product")
+        //     .then(function (response){
+        //         return JSON.parse(response);
+        //     })
+        //     .then(function (json){
+        //         document.getElementById("id").textContent = json.id;
+        //         document.getElementById("name").textContent = json.name;
+        //         document.getElementById("price").textContent = json.price;
+        //     })
+        //     .catch(function (error) {
+        //         document.getElementById("id").textContent = json.error;
+        //         document.getElementById("name").textContent = json.error;
+        //         document.getElementById("price").textContent = json.error;
+        //     })
+        //     .finally(function () {
+        //         console.info("Finally");
+        //     })
+
+    </script>
+
+</body>
+</html>
